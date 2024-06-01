@@ -1,0 +1,6 @@
+# Exclude everything except src folder, env-example, package.json, tsconfig.json, vite.config.ts, README.md
+
+/.vscode
+/node_modules
+.env.*
+package-lock.json
