@@ -2,11 +2,11 @@
   "name": "express_typescript_project_structure",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "./dist/server.js",
   "scripts": {
     "lint": "eslint .",
     "lint-fix": "eslint --fix .",
-    "format": "prettier --write \"src/**/*.ts\" \"tests/**/*.ts\"",
+    "format": "prettier --write \"src/**/*.ts\"",
     "test": "vitest",
     "dev": "tsx watch src/server.ts"
   },
@@ -18,7 +18,7 @@
     "@types/eslint__js": "^8.42.3",
     "@types/express": "^4.17.21",
     "@types/node": "^20.13.0",
-    "eslint": "^9.4.0",
+    "eslint": "^8.57.0",
     "eslint-config-prettier": "^9.1.0",
     "prettier": "^3.3.0",
     "tsx": "^4.11.0",
@@ -27,6 +27,15 @@
     "vitest": "^1.6.0"
   },
   "dependencies": {
-    "express": "^4.19.2"
+    "@types/dotenv": "^8.2.0",
+    "@types/helmet": "^4.0.0",
+    "@types/jsonwebtoken": "^9.0.6",
+    "@types/morgan": "^1.9.9",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "helmet": "^7.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "morgan": "^1.10.0"
   }
 }
