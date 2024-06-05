@@ -1,3 +1,8 @@
+import { validateEmail } from "../validators/EmailValidator";
+import { configureLogger } from '../utils/logger';
+
+const logger = configureLogger('error');
+
 export class User {
 	private name: string;
 	private email: string;
@@ -25,7 +30,15 @@ export class User {
 		this.name = name;
 	}
 
-	setEmail(email: string): void {
+	async setEmail(email: string): Promise<void> {
+
+		const validationError = await validateEmail(email);
+
+		if(validationError){
+			logger.error("Email Inválido: " + validationError[0].message);
+			throw new Error('Email Inválido: ', validationError[0].message);
+		}
+
 		this.email = email;
 	}
 
